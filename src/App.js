@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import FetchBalance from './pages/Fetch-balance';
+import SearchNfts from './pages/Search-nfts';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<FetchBalance />} />
+        <Route path='/nfts' element={<SearchNfts />} />
+      </Routes>
     </div>
   );
 }
